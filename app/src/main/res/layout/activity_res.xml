@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorBackground"
+    tools:context=".activity.ResActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_close"
+        android:background="?colorBackground"
+        app:titleTextColor="?colorBackgroundTint" />
+
+
+    <RelativeLayout
+        android:layout_below="@id/toolbar_res"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="match_parent">
+
+        <com.ramijemli.percentagechartview.PercentageChartView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/mChart"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:pcv_backgroundBarColor="?colorBackground"
+            app:pcv_textColor="#00B0FF"
+            app:pcv_progressColor="#00B0FF"
+            app:pcv_orientation="counter_clockwise"
+            app:pcv_animDuration="800"
+            app:pcv_animInterpolator="anticipate_overshoot"
+            app:pcv_backgroundBarThickness="10dp"
+            app:pcv_mode="ring"
+            app:pcv_progress="0"
+            app:pcv_progressBarThickness="10dp"
+            app:pcv_startAngle="0"
+            app:pcv_textSize="50sp"/>
+
+
+        <TextView
+            android:id="@+id/iv_cont3"
+            android:layout_below="@id/mChart"
+            android:textColor="?attr/colorTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 / 18"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/iv_cont3"
+            android:background="?attr/colorBackground"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_an2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="50" >
+
+                <LinearLayout
+                    android:background="@drawable/bg_an3"
+                    android:backgroundTint="#00E676"
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"/>
+
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/mChart_ok"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    app:pcv_backgroundBarColor="#2600E676"
+                    app:pcv_textColor="#00E676"
+                    app:pcv_progressColor="#00E676"
+                    app:pcv_orientation="counter_clockwise"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="anticipate_overshoot"
+                    app:pcv_backgroundBarThickness="5dp"
+                    app:pcv_mode="ring"
+                    app:pcv_progress="0"
+                    app:pcv_progressBarThickness="5dp"
+                    app:pcv_startAngle="0"
+                    app:pcv_textSize="18sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Correct Answer"
+                        android:textColor="#00E676"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_an2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="50" >
+
+                <LinearLayout
+                    android:background="@drawable/bg_an3"
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"/>
+
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/mChart_no"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    app:pcv_backgroundBarColor="#26F50057"
+                    app:pcv_textColor="#F50057"
+                    app:pcv_progressColor="#F50057"
+                    app:pcv_orientation="counter_clockwise"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="anticipate_overshoot"
+                    app:pcv_backgroundBarThickness="5dp"
+                    app:pcv_mode="ring"
+                    app:pcv_progress="0"
+                    app:pcv_progressBarThickness="5dp"
+                    app:pcv_startAngle="0"
+                    app:pcv_textSize="18sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Rong Answer"
+                        android:textColor="#F50057"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

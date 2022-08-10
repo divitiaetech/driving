@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackground">
+
+    <RelativeLayout
+        android:id="@+id/rl_details_top"
+        android:background="@drawable/bg_tool"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_onBack"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_back"
+            android:layout_width="70dp"
+            android:layout_height="40dp">
+            <ImageView
+                android:paddingStart="30dp"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                tools:ignore="RtlSymmetry"
+                android:contentDescription="@string/todo" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_end"
+            android:layout_width="70dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/iv_cont"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:textSize="17sp"
+                android:text="0 / 0"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tv_details_title"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:layout_below="@id/tv_details_title"
+            android:id="@+id/tv_details_su_title"
+            android:textColor="?attr/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <RelativeLayout
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginEnd="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+
+            <View
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-2dp"
+                android:background="@drawable/background_re"
+                android:layout_width="30dp"
+                android:layout_height="40dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/adView"
+        android:layout_below="@id/rl_details_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_details_Answer"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:text="@string/app_name"
+                android:textColor="?attr/colorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/iv_image"
+                    android:scaleType="centerInside"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/placeholder_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"/>
+
+                <ProgressBar
+                    android:padding="50dp"
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_image"
+                    android:layout_alignBottom="@+id/iv_image"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bt_1"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_an"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_details_Answer_A"
+                    android:padding="10dp"
+                    android:textColor="?attr/colorTitle"
+                    android:textAlignment="viewStart"
+                    android:text="@string/app_name"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rb_1" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bt_2"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_an"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_details_Answer_B"
+                    android:padding="10dp"
+                    android:textColor="?attr/colorTitle"
+                    android:textAlignment="viewStart"
+                    android:text="@string/app_name"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rb_2" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bt_3"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_an"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_3"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_details_Answer_C"
+                    android:padding="10dp"
+                    android:textColor="?attr/colorTitle"
+                    android:textAlignment="viewStart"
+                    android:text="@string/app_name"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rb_3" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_bt_4"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_an"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_4"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_details_Answer_D"
+                    android:padding="10dp"
+                    android:textColor="?attr/colorTitle"
+                    android:textAlignment="viewStart"
+                    android:text="@string/app_name"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rb_4" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_details_bottom"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorBackground"
+        android:backgroundTint="?attr/colorBackground"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/rl_details_bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_answer3"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ProgressBar
+            android:id="@+id/pb_load"
+            android:progress="0"
+            android:progressTint="#9CFF3D00"
+            android:progressBackgroundTint="#00000000"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Answer it "
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pb_details"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UpdateActivity"
+    android:background="?colorBackground">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_close"
+        android:padding="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:tint="?colorBackgroundTint"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_appLogo"
+                android:src="@drawable/logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:riv_corner_radius="10dp"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/iv_appName"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginStart="15dp"
+                android:textColor="?colorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_appLogo"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/iv_appName"
+                android:text="need an update"
+                android:textColor="?colorTitle"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_appName"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/iv_appLogo"
+                android:text="Download size 4.5 MB"
+                android:textColor="?colorSubTitle"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:text="To use this app, download the latest version"
+            android:textColor="?colorTitle"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/iv_noteDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="textStart"
+            android:text="note"
+            android:textColor="?colorTitle"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_appUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

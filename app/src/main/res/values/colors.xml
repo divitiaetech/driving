@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Light Mode Color-->
+    <color name="colorAccentLight">#3c71f1</color>
+    <color name="colorAccentLight_50">#263C71F1</color>
+    <color name="backgroundLight">#FDFDFE</color>
+    <color name="backgroundLight_S">#ECECEC</color>
+    <color name="titleLight">#161616</color>
+    <color name="subTitleLight">#6D6D6D</color>
+    <color name="borderLight">#1A0C1318</color>
+
+    <!--Night Mode Color-->
+    <color name="colorAccentNight">#FFCA28</color>
+    <color name="colorAccentNight_50">#26FFCA28</color>
+    <color name="backgroundNight">#000000</color>
+    <color name="backgroundNight_S">#121212</color>
+    <color name="titleNight">#DBDBDB</color>
+    <color name="subTitleNight">#E9A0A0A0</color>
+    <color name="borderNight">#191919</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="social_fb">#3b5999</color>
+    <color name="social_ggle">#ea4235</color>
+
+</resources>

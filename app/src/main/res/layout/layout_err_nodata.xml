@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_dark_data"
+        android:contentDescription="@string/todo"/>
+
+    <TextView
+        android:id="@+id/tv_empty_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/no_data_found"
+        android:textColor="?attr/colorSubTitle"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_empty_try"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/refresh"
+        android:background="?attr/colorBackgroundTint"
+        android:textColor="?attr/colorBackground"/>
+
+</LinearLayout>

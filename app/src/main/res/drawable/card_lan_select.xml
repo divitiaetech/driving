@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <padding
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="2dp"
+                android:top="1dp" />
+            <solid android:color="?attr/colorAccent_50" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:endColor="?attr/colorAccent"
+                android:startColor="?attr/colorAccent"  />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+</layer-list>
